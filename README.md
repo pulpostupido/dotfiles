@@ -9,7 +9,7 @@ curl -fsSL https://raw.githubusercontent.com/pulpostupido/dotfiles/main/install.
 Asks two things (git email, work machine?), then:
 
 - **chezmoi** owns the config files (`~/.local/bin/chezmoi`)
-- **mise** installs every CLI tool per-user: fish, neovim, lazygit, ripgrep, fd, fzf, zoxide, bat, delta, node
+- **mise** installs every CLI tool per-user: fish, herdr, claude, neovim, lazygit, ripgrep, fd, fzf, zoxide, bat, delta, node
 - `~/.bashrc` gets one appended line that hands interactive shells to fish (no `chsh` needed). `NO_FISH=1 bash` escapes.
 
 ## Day to day
