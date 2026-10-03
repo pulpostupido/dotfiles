@@ -1,0 +1,20 @@
+[tools]
+{{- if eq .chezmoi.os "linux" }}
+"github:fish-shell/fish-shell" = "latest"   # macOS: brew install fish
+{{- end }}
+neovim = "latest"
+lazygit = "latest"
+ripgrep = "latest"
+fd = "latest"
+fzf = "latest"
+zoxide = "latest"
+bat = "latest"
+delta = "latest"
+node = "lts"    # LazyVim/mason needs it
+{{- if not .work }}
+rust = { version = "stable", components = "rust-analyzer,clippy,rustfmt" }
+bacon = "latest"
+{{- end }}
+
+[settings]
+experimental = true

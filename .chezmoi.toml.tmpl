@@ -1,5 +1,8 @@
 {{- $email := promptStringOnce . "email" "Git email for this machine" -}}
 {{- $work := promptBoolOnce . "work" "Work machine (no personal secrets, work git identity)" -}}
+# plain config files become symlinks into the repo: edit in place, then `dotpush`
+mode = "symlink"
+
 [data]
   email = {{ $email | quote }}
   work = {{ $work }}
