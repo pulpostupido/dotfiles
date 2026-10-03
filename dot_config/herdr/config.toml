@@ -1,5 +1,40 @@
-[keys]
-prefix = "ctrl+a"
+onboarding = false
 
 [theme]
+# catppuccin mocha, like everything else
 name = "catppuccin"
+
+[keys]
+# tmux: set-option -g prefix C-a
+prefix = "ctrl+a"
+
+# --- tabs (tmux "windows") ---
+new_tab = "prefix+ctrl+c"        # tmux: bind ^C new-window
+close_tab = "prefix+shift+x"
+rename_tab = "prefix+r"          # tmux: bind r command-prompt "rename-window %%"
+previous_tab = "prefix+shift+h"  # tmux: bind H previous-window
+next_tab = "prefix+shift+l"      # tmux: bind L next-window
+switch_tab = "prefix+1..9"
+
+# --- panes ---
+split_vertical = "prefix+v"      # tmux: bind v split-window -h (side by side)
+split_horizontal = "prefix+s"    # tmux: bind s split-window -v (stacked)
+close_pane = "prefix+c"          # tmux: bind c kill-pane
+zoom = "prefix+z"                # tmux: bind z resize-pane -Z
+focus_pane_left = "prefix+h"
+focus_pane_down = "prefix+j"
+focus_pane_up = "prefix+k"
+focus_pane_right = "prefix+l"
+# note: prefix twice (ctrl+a ctrl+a) sends a literal ctrl+a, same as your tmux send-prefix
+
+# tmux: bind , . - = resize-pane (repeatable)
+resize_pane_left = "prefix+comma"
+resize_pane_right = "prefix+period"
+resize_pane_down = "prefix+minus"
+resize_pane_up = "prefix+plus"
+resize_mode = "prefix+m"         # hold-and-resize mode (hjkl), since prefix+r is rename now
+
+# --- session ---
+detach = "prefix+ctrl+d"         # tmux: bind ^D detach
+reload_config = "prefix+shift+r" # tmux: bind R source-file
+settings = "prefix+shift+s"      # moved off prefix+s (now split)

@@ -2,19 +2,19 @@
 {{- if eq .chezmoi.os "linux" }}
 "github:fish-shell/fish-shell" = "latest"   # macOS: brew install fish
 {{- end }}
-herdr = "latest"        # the one multiplexer, local + remote
-claude = "latest"       # Claude Code
+herdr = "latest"
+claude = "latest"
 neovim = "latest"
 lazygit = "latest"
 ripgrep = "latest"
 fd = "latest"
-fzf = "latest"
-zoxide = "latest"
-bat = "latest"
 delta = "latest"
-node = "lts"    # LazyVim/mason needs it
+node = "lts"
+uv = "latest"
+gh = "latest"
 {{- if not .work }}
 rust = { version = "stable", components = "rust-analyzer,clippy,rustfmt" }
+typst = "latest"
 {{- end }}
 
 [settings]
