@@ -32,7 +32,7 @@ outer.right = 8
 8 = ['built-in', 'secondary', 'main']
 
 [mode.main.binding]
-alt-enter = 'exec-and-forget open -na Ghostty'
+alt-enter = 'exec-and-forget /Applications/Ghostty.app/Contents/MacOS/ghostty +new-window || open -a Ghostty'
 
 # focus / move: past the edge of a screen = onto the next screen (GlazeWM behaviour)
 alt-h = 'focus --boundaries all-monitors-outer-frame left'
