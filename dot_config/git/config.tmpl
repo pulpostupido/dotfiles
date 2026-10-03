@@ -1,0 +1,17 @@
+[user]
+    name = William Frisch Møller
+    email = {{ .email }}
+[init]
+    defaultBranch = main
+[pull]
+    rebase = true
+[push]
+    autoSetupRemote = true
+[core]
+    pager = delta
+[interactive]
+    diffFilter = delta --color-only
+[delta]
+    navigate = true
+[merge]
+    conflictstyle = zdiff3

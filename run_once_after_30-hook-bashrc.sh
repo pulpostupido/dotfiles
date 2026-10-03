@@ -1,0 +1,4 @@
+#!/bin/sh
+LINE='[ -f "$HOME/.config/shell/exec-fish.sh" ] && . "$HOME/.config/shell/exec-fish.sh"'
+touch "$HOME/.bashrc"
+grep -qF exec-fish.sh "$HOME/.bashrc" || printf '\n# dotfiles: hand off to fish (NO_FISH=1 bash to skip)\n%s\n' "$LINE" >> "$HOME/.bashrc"

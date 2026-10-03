@@ -1,0 +1,4 @@
+#!/bin/sh
+# re-runs whenever mise/config.toml changes: {{ include "dot_config/mise/config.toml" | sha256sum }}
+set -eu
+"$HOME/.local/bin/mise" install --yes
